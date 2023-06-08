@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { YELLOW } from "./constants/string_constants";
+import { yellow } from "./constants/string_constants";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Homescreen from "./screens/HomeScreen";
+import HomeScreen from "./screens/HomeScreen";
 import Splash from "./screens/Splash";
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
@@ -32,11 +32,16 @@ export default function App() {
             />
           ) : null}
           <Stack.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
+          {/* <Stack.Screen
             name="Signup"
             component={Signup}
             options={{
               title: " ",
-              headerStyle: { backgroundColor: YELLOW },
+              headerShown: false,
             }}
           />
           <Stack.Screen
@@ -44,22 +49,14 @@ export default function App() {
             component={Login}
             options={{
               title: " ",
-              // headerStyle: { backgroundColor: YELLOW },
-              headerStyle: {
-                backgroundColor: "#FFD700",
-                borderBottomWidth: 4,
-                borderBottomColor: "#FF8C00",
-              },
-              headerTitleStyle: {
-                color: "#FFFFFF",
-              },
+              headerShown: false,
             }}
           />
           <Stack.Screen
             name="FAQs"
             component={FAQs}
             options={{ headerShown: false }}
-          />
+          /> */}
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
@@ -70,7 +67,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fffff",
+    backgroundColor: yellow,
     // alignItems: "center",
     // justifyContent: "center",
   },
