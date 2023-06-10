@@ -9,7 +9,7 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
-import { DARK_GRAY, YELLOW, BLUE } from "../constants/string_constants";
+import { darkgray, yellow, blue } from "../constants/string_constants";
 
 const questions = [
   {
@@ -77,7 +77,7 @@ export default function FAQs() {
         style={{
           fontSize: 45,
           fontWeight: "bold",
-          color: DARK_GRAY,
+          color: darkgray,
           marginTop: 30,
         }}
       >
@@ -112,11 +112,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   head: {
-    backgroundColor: BLUE,
+    backgroundColor: blue,
     fontSize: 17,
     fontWeight: "bold",
     marginBottom: 10,
-    color: DARK_GRAY,
+    color: darkgray,
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
     borderBottomLeftRadius: 15,
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   text: {
-    color: DARK_GRAY,
+    color: darkgray,
     fontSize: 15,
     margin: 10,
   },

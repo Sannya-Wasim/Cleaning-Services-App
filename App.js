@@ -9,6 +9,7 @@ import Splash from "./screens/Splash";
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import FAQs from "./screens/FAQs";
+import Items from "./screens/Items";
 
 const Stack = createNativeStackNavigator();
 
@@ -36,7 +37,7 @@ export default function App() {
             component={HomeScreen}
             options={{ headerShown: false }}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
             name="Signup"
             component={Signup}
             options={{
@@ -56,8 +57,14 @@ export default function App() {
             name="FAQs"
             component={FAQs}
             options={{ headerShown: false }}
-          /> */}
+          />
+          <Stack.Screen
+            name="Items"
+            component={Items}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
+        {/* <Navbar navigation={navigation} /> */}
       </NavigationContainer>
       <StatusBar style="auto" />
     </View>

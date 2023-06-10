@@ -21,8 +21,9 @@ import { Feather } from "@expo/vector-icons";
 import Carousel from "../components/Carousel";
 import Services from "../components/Services";
 import Deals from "../components/Deals";
+import Navbar from "../components/Navbar";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.homeContainer}>
       <ScrollView>
@@ -60,6 +61,7 @@ const HomeScreen = () => {
         <Services />
         <Deals />
       </ScrollView>
+      <Navbar navigation={navigation} />
     </SafeAreaView>
   );
 };
